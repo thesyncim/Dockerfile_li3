@@ -41,7 +41,8 @@ RUN echo "extension=redis.so"> /etc/php5/fpm/conf.d/redis.ini
 RUN apt-get install -y  openssh-server
 RUN mkdir /var/run/sshd
 
-
+RUN pecl install xdebug
+ADD xdebug.ini /etc/php5/fpm/conf.d/xdebug.ini
 
 #add config files
 ADD nginx.conf /etc/nginx/nginx.conf
@@ -49,6 +50,7 @@ ADD www.conf /etc/php5/fpm/pool.d/www.conf
 ADD default /etc/nginx/sites-available/default
 ADD start.sh /
 ADD php.ini /etc/php5/fpm/php.ini
+
 
 # allow to execute
 RUN chmod +x /start.sh
