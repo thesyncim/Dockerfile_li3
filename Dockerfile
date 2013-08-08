@@ -48,6 +48,7 @@ ADD nginx.conf /etc/nginx/nginx.conf
 ADD www.conf /etc/php5/fpm/pool.d/www.conf
 ADD default /etc/nginx/sites-available/default
 ADD start.sh /
+ADD php.ini /etc/php5/fpm/php.ini
 
 # allow to execute
 RUN chmod +x /start.sh
