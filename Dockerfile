@@ -57,6 +57,7 @@ RUN chmod +x /start.sh
 
 EXPOSE 80
 EXPOSE 22
+EXPOSE 9000
 
 CMD    ["/start.sh"]
 
