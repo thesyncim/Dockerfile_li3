@@ -42,14 +42,14 @@ RUN apt-get install -y  openssh-server
 RUN mkdir /var/run/sshd
 
 RUN pecl install xdebug
-ADD xdebug.ini /etc/php5/fpm/conf.d/xdebug.ini
+ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/xdebug.ini /etc/php5/fpm/conf.d/xdebug.ini
 
 #add config files
-ADD nginx.conf /etc/nginx/nginx.conf
-ADD www.conf /etc/php5/fpm/pool.d/www.conf
-ADD default /etc/nginx/sites-available/default
-ADD start.sh /
-ADD php.ini /etc/php5/fpm/php.ini
+ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/nginx.conf /etc/nginx/nginx.conf
+ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/www.conf /etc/php5/fpm/pool.d/www.conf
+ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/default /etc/nginx/sites-available/default
+ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/start.sh /
+ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/php.ini /etc/php5/fpm/php.ini
 
 
 # allow to execute
