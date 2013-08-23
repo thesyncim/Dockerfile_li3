@@ -16,7 +16,7 @@ RUN apt-get update && apt-get upgrade
 
 
 # install php & extensions
-RUN apt-get install -y php5-fpm php-apc php5-curl php5-gd php-pear php5-xmlrpc php5-imagick php5-imap php5-mcrypt php5-memcache git php5-dev php5-cli php5-memcached php5-mysql php5-sqlite
+RUN apt-get install -y php5-fpm php-apc php5-curl php5-gd php-pear php5-xmlrpc php5-imagick php5-imap php5-mcrypt php5-memcache git php5-dev php5-cli php5-memcached php5-mysql php5-sqlite supervisor
 
 # set root password
 RUN echo "root:123456" | chpasswd
@@ -50,6 +50,7 @@ ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/www.conf /etc/php5/fp
 ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/default /etc/nginx/sites-available/default
 ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/start.sh /
 ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/php.ini /etc/php5/fpm/php.ini
+ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 
 # allow to execute
