@@ -48,7 +48,6 @@ ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/xdebug.ini /etc/php5/
 ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/nginx.conf /etc/nginx/nginx.conf
 ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/www.conf /etc/php5/fpm/pool.d/www.conf
 ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/default /etc/nginx/sites-available/default
-ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/start.sh /
 ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/php.ini /etc/php5/fpm/php.ini
 ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/php-fpm.conf  /etc/php5/fpm/php-fpm.conf
