@@ -51,6 +51,7 @@ ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/default /etc/nginx/si
 ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/start.sh /
 ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/php.ini /etc/php5/fpm/php.ini
 ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+ADD https://raw.github.com/thesyncim/Dockerfile_li3/master/php-fpm.conf  /etc/php5/fpm/php-fpm.conf
 
 
 # allow to execute
